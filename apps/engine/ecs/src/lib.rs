@@ -25,7 +25,7 @@ pub mod systems;
 
 // Re-export core types
 pub use entity::{Entity, EntityId};
-pub use component::{Component, ComponentId, ComponentStorage};
+pub use component::{Component, ComponentId, ComponentStorage, ComponentTrait};
 pub use world::World;
 pub use system::{System, SystemParam, IntoSystem};
 pub use storage::{Storage, TableStorage, SparseStorage};
@@ -68,7 +68,7 @@ pub fn query_entities(world: &World, component_types: Vec<Symbol>, env: &soroban
 pub mod prelude {
     pub use super::{
         entity::{Entity, EntityId},
-        component::{Component, ComponentId, ComponentStorage},
+        component::{Component, ComponentId, ComponentStorage, ComponentTrait},
         world::World,
         system::{System, SystemParam, IntoSystem},
         storage::{Storage, TableStorage, SparseStorage},
